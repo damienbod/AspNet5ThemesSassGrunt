@@ -1,25 +1,22 @@
 ﻿<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="utf-8">
-    <title>AngularJS Fastest Animal</title>
+<html ng-app="mainApp">
+    <head lang="en">
+        <meta charset="utf-8">
+        <title>AngularJS Themes using SASS in ASP.NET 5</title>
+        <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="dark_theme.min.css" ng-if="load" rel="stylesheet">
+        <link href="default_theme.min.css" ng-if="!load" rel="stylesheet">
+    </head>
+    <body class="bodydefinitions">
+        <div>
+            <input class="changeThemeButton" type="button" ng-click="load = !load" value="Change Theme" />
+            <hr />
+            <div ui-view></div>
+        </div>
 
-    <!--<link href="dark_theme.min.css" rel="stylesheet" />-->
-    <link href="default_theme.min.css" rel="stylesheet" />
-
-</head>
-<body class="bodydefinitions">
-
-    <div ng-app="mainApp">
-        <h4 class="panel-heading">Index Layout page</h4>
-        <hr />
-        <div ui-view></div>
-    </div>
-
-    <script src="lib/angular/angular.js"></script>
-    <script src="lib/angular-ui-router/angular-ui-router.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-</body>
+        <script src="lib/angular/angular.js"></script>
+        <script src="lib/angular-ui-router/angular-ui-router.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </body>
 </html>
